@@ -3,29 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: comic sans ms;
-    color: black;
+    color: #ffffff; 
 }
 
 :root {
-    --background-color: #ffffff;
-}
-
-section {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 50px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 2vh 3vh;
-    text-align: center;
-    transition: .2s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3vh;
-    padding: 6vh 5vh;
+    --background-color: #222;
 }
 
 body {
@@ -34,48 +16,75 @@ body {
     gap: 2vh;
     justify-content: center;
     align-items: center;
-    height: 100dvh;
+    height: 100vh;
     background-color: var(--background-color);
-    transition: 2s;
+    transition: background-color 2s ease; 
+}
+
+.glass {
+    background: rgba(16, 16, 16, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 2vh;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+section {
+    padding: 6vh 5vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
 }
 
 input,
 button {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 50px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 2vh 3vh;
     text-align: center;
-    transition: .2s;
+    transition: all 0.3s ease;
+    border-radius: 1vh;
+    width: 30vh;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-#botao-verde {
-    background-color: rgba(51, 255, 0, 0.2);
-    border: 1px solid rgba(51, 255, 0, 0.2);
-}
-
-#botao-vermelho {
-    background-color: rgba(255, 0, 0, 0.2);
-    border: 1px solid rgba(255, 0, 0, 0.2);
+input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
 }
 
 ::-webkit-input-placeholder {
-    color: black;
- }
+    color: rgba(255, 255, 255, 0.5);
+}
 
 input:focus {
     outline: none;
-    background-color: rgba(255, 255, 255, 0.288);
-}
-
-button:hover {
-    background-color: rgba(255, 255, 255, 0.288);
-    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 button {
-    width: 30vh;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.2); 
+}
+
+#botao-verde {
+    background-color: rgba(0, 180, 80, 0.75);
+    color: white;
+    border: 1px solid rgba(0, 255, 100, 0.3);
+}
+
+#botao-vermelho {
+    background-color: rgba(200, 30, 30, 0.75);
+    color: white;
+    border: 1px solid rgba(255, 50, 50, 0.3);
 }
